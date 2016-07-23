@@ -1,0 +1,365 @@
+/*********************************
+** CORE
+*********************************/
+
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    outline: 0;
+}
+/* Resets all body margins and padding to 0 for good measure */
+
+body
+{
+    /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
+    -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+
+        background-color: #f2f2f2;
+}
+
+table td
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+
+
+
+    border: 0 none;
+}
+/*This resolves the Outlook 07, 10, and Gmail td padding issue. Heres more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
+
+img
+{
+    line-height: 100%;
+
+    height: auto;
+
+    text-decoration: none;
+
+    border: 0 none;
+    outline: none;
+}
+
+a img
+{
+    border: 0 none;
+}
+
+.img-block
+{
+    display: block;
+}
+.img-responsive img
+{
+    width: 100%;
+    height: auto;
+}
+
+table,
+td
+{
+    border-collapse: collapse;
+}
+
+#backgroundTable
+{
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+
+    table-layout: fixed;
+
+    background-color: #f2f2f2;
+
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+
+
+
+$baseFontFamily: Arial, Helvetica, sans-serif;
+
+@mixin fontFamily($fontFamily)
+{
+    font-family: $fontFamily;
+}
+
+
+td div
+{
+    line-height: 1.2;
+
+    @include fontFamily($baseFontFamily);
+}
+
+#wrapperTable
+{
+    background-color: #fff;
+}
+
+
+#wrapperTable > tr > td:not(.fluid)
+{
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
+
+
+/*********************************
+** ELEMENTS
+*********************************/
+.topic {
+
+
+    td {
+        font-size: 0;
+        color: #ffffff;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    &--news {
+        background-color: #65a33e;
+    }
+    & div {
+        line-height: 22px;
+    }
+}
+
+.h1
+{
+    font-size: 24px;
+
+    padding-bottom: 10px;
+    div
+    {
+        line-height: 28px;
+
+        color: #414141;
+    }
+}
+
+
+.h2
+{
+    font-size: 16px;
+    font-weight: bold;
+
+    //padding-bottom: 10px;
+
+    padding-bottom: 5px;
+    // &--list
+    // {
+    //     padding-bottom: 0;
+    // }
+    div
+    {
+        line-height: 21px;
+
+        color: #414141;
+    }
+}
+.text
+{
+    font-size: 14px;
+
+    padding-bottom: 10px;
+    div
+    {
+        line-height: 20px;
+
+        color: #808080;
+    }
+}
+.list {
+    font-size: 14px;
+
+    padding-bottom: 15px;
+    div
+    {
+        line-height: 20px;
+
+        color: #808080;
+    }
+}
+
+.link
+{
+    text-decoration: none;
+
+    color: #4b9bce;
+}
+
+/*********************************
+** FOOTER
+*********************************/
+
+#footerTable
+{
+    font-size: 11px;
+
+    color: #4b4b4b;
+    a
+    {
+        text-decoration: none;
+
+        color: #85c0e1;
+    }
+}
+
+
+.banner img {
+    display: block;
+    padding-bottom: 20px;
+}
+
+
+
+
+/*********************************
+// ** CORE
+// *********************************/
+
+$baseFontSize: 10px;
+// $baseLineHeight: 1.2;
+// $horPaddings: $baseFontSize  * 1.5;
+$baseFontFamily: Arial, Helvetica, sans-serif;
+
+
+
+// /*********************************
+// ** ELEMENTS
+// *********************************/
+
+/**
+ * BUTTONS
+ */
+.button-wrapper
+{
+    padding-top: $baseFontSize;
+    padding-bottom: $baseFontSize;
+
+    vertical-align: middle;
+}
+.button
+{
+    width: auto !important;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: #5e8d30;
+}
+
+.button td
+{
+    padding: 0;
+}
+
+.button-link
+{
+    font-family: $baseFontFamily;
+    font-size: $baseFontSize * 1.4;
+    line-height: $baseFontSize * 1.6;
+
+    display: inline-block;
+
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: #fff !important;
+    border: #70a839 10px solid;
+    background-color: #70a839;
+}
+
+.button-inner
+{
+    background-color: #70a839;
+    border-bottom: 1px solid #5e8d30;
+}
+
+
+
+.button-link span
+{
+    display: inline-block;
+
+    color: #fff;
+    border-right: #70a839 10px solid;
+    border-left: #70a839 10px solid;
+}
+
+.button--wide {
+    & .button-link {
+         border: #70a839 7px solid;
+    }
+}
+
+
+/**
+ * Login table
+ */
+
+#loginTable > tr > td:first-child {
+  padding-left: 60px;
+}
+
+#loginTable > tr > td:last-child {
+  padding-right: 60px;
+}
+#loginTable > tr > td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#loginTable:not(.top) {
+  background-color: #ffffff;
+}
+
+/**
+ * Advance welcome banner
+ */
+#welcomeBanner {
+
+}
+
+#welcomeBanner > tr > td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#welcomeBanner > tr > td:first-child {
+  padding-left: 60px;
+}
+
+#welcomeBanner > tr > td:last-child {
+  padding-right: 60px;
+}
+
+.hr {
+  font-size: 20px;
+  line-height: 20px;
+  & div {
+    line-height: 20px;
+  }
+  & td {
+    line-height: 20px;
+  }
+}
+
+
+.contentTb > tr:first-child > td  {
+    padding-top: 35px;
+}
+.contentTb > tr:last-child > td:not(.img-responsive)  {
+    padding-bottom: 35px;
+}

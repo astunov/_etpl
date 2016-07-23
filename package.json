@@ -1,0 +1,28 @@
+{
+  "name": "segment__tpl",
+  "version": "1.0.0",
+  "description": "Template for segment mail construction",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.2.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-convert": "^0.2.0",
+    "gulp-data": "^1.2.1",
+    "gulp-ignore": "^2.0.1",
+    "gulp-inline-css": "^3.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-tinypng-compress": "^1.1.8",
+    "gulp-watch": "^4.3.5",
+    "gulp-zip": "^3.0.2",
+    "rimraf": "^2.3.1"
+  }
+}

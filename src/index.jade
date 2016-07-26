@@ -66,6 +66,21 @@ block vars
      */
     var task = 'em232';
 
+    /**
+     *
+     * @type {Object}
+     */
+     var topBanner =
+       {
+        "left": "http://multimedia.email.fbs.com/fbs/1/1/photos/3788.png",
+        "right": "http://multimedia.email.fbs.com/fbs/1/1/photos/3781.png",
+        "height": "257"
+       }
+
+
+    // TODO
+    var LETTERNAME = ''
+
 extends ../../framework/_layout
 
 //- CURRENT TEMPLATE
@@ -75,33 +90,33 @@ mixin letter(prop)
     +ifelse(prop_item, index, prop)
     table(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
       +preheader(prop_item)
-      +startBanner (prop_item)
+      +startBanner (prop_item, topBanner)
 
-      +hr()
+    +hr()
 
-      table.contentTb(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
-        +h1(prop_item, 'left')
-          | !{prop_item.p0}
-        +text(prop_item)
-          | !{prop_item.p1}
-        +text(prop_item)
-          | !{prop_item.p2}
-        +text(prop_item)
-          | !{prop_item.p3}
-        +list(prop_item, prop_item.p4, prop_item.p5)
-        +text(prop_item)
-          | !{prop_item.p6}
-        +text(prop_item)
-          | !{prop_item.p7}
-        +text(prop_item)
-          | !{prop_item.p8}
-        +text(prop_item)
-          | !{prop_item.p9}
+    table.contentTb(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
+      +h1(prop_item, 'left')
+        | !{prop_item.p0}
+      +text(prop_item)
+        | !{prop_item.p1}
+      +text(prop_item)
+        | !{prop_item.p2}
+      +text(prop_item)
+        | !{prop_item.p3}
+      +list(prop_item, prop_item.p4, prop_item.p5)
+      +text(prop_item)
+        | !{prop_item.p6}
+      +text(prop_item)
+        | !{prop_item.p7}
+      +text(prop_item)
+        | !{prop_item.p8}
+      +text(prop_item)
+        | !{prop_item.p9}
 
-      +hr()
+    +hr()
 
-      +login(prop_item)
-      +footer(prop_item)
+    +login(prop_item)
+    +footer(prop_item)
 
 //- PRODUCTION
 block letter

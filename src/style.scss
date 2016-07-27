@@ -363,3 +363,12 @@ $baseFontFamily: Arial, Helvetica, sans-serif;
 .contentTb > tr:last-child > td:not(.img-responsive)  {
     padding-bottom: 35px;
 }
+
+
+// helpers
+
+.tb {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+}

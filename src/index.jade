@@ -90,6 +90,9 @@ mixin letter(prop)
     +ifelse(prop_item, index, prop)
     table(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
       +preheader(prop_item)
+      //-
+        Border color map
+        "trans" (default),"trig", "promo", "news"
       +startBanner (prop_item, topBanner)
 
     +hr()

@@ -1,127 +1,129 @@
--
-  /**
-   *  @constant
-   *  @type {false} email client
-   */
-
-   var GR = true;
-   var EMS = false;
-
 block vars
-  -
-    /**
-     * @type {Array.<Object>} —
-     * List of letter data
-     */
-    var dataN =
-      [
-        {
-          "lang": "en",
-          "site": "https://fbs.com",
-          "rtl": "",
-          "header": "Don’t miss your chance to spend a fantastic weekend in Rio de Janeiro",
-          "preheader": "Read the e-mail to learn the details and participate in a special FBS promotion",
-          "p0": "Hello, [[name]]!",
-          "p1": "FBS gives you a remarkable opportunity to spend a weekend in Rio de Janeiro. Hurry up, the promotion is almost over, you only have time until the 31st of July. Don’t miss your chance to spend two crazy days in the Paradise City.",
-          "p2": "Give yourself some rest and forget about graphs, columns and trading for two beautiful days. Only with fresh mind and a tanned body you will be able to achieve new heights of Forex trading. Remember to party hard when you work hard.",
-          "p3": "FBS gives you a chance to win a luxury trip to Rio for you and your companion. Enjoy the sun, the beach and everything else the city has to offer.",
-          "p4": "To participate in the promotion just do the following:",
-          "p5": "1.        Deposit $500; <br>\n2.        Trade 5 lots; <br>\n3.        Send a confirmation e-mail to <a href=\"mailto:brasil@fbs.com\" class=\"link\" target=\"_blank\">brasil@fbs.com</a>.",
-          "p6": "And get a chance to win a fantastic weekend for two in Rio de Janeiro.",
-          "p7": "In case you deposited $500 but ran out of funds before trading 5 lots, you can always deposit additional money and trade the remaining number of lots.",
-          "p8": "The winner will be announced on 08.03.2016. Follow us on Facebook and keep up with the news on <a href=\"https://ptfbs.com?utm_source=fbs-gr360&utm_medium=email&utm_content=newsletter_23072016_em232_body_text_index&utm_campaign=en_rtrg\" class=\"link\" target=\"_blank\">ptfbs.com</a> to learn the results.",
-          "p9": "We wish you the best of luck, <br> FBS Team",
-          "footerFirst": "FBS Inc company reminds you: trading on the binary options market is financially risk bearing. The present e-mail contains purely marketing-related information and is not a recommendation to execute any orders or invest funds. The decision to invest funds is made entirely by the client.",
-          "footerSecond": "You received this e-mail because you registered at <a href=\"https://fbs.com?utm_replace_index\" target=\"_blank\">fbs.com</a> (<a href=\"https://my.fbs.com/payments?utm_replace_payments\" target=\"_blank\">log into the Personal area</a>). Don’t miss a single important message – add our e-mails <a href=\"mailto:support@fbs.com\" target=\"_blank\">support@fbs.com</a> and <span style=\"color:inherit;\">info@email.fbs.com</span> to your address book and you will always receive the latest letters and find them in your Inbox. You may also <a href=\"[[remove]]\" target=\"_blank\"> unsubscribe from the newsletter</a>. Got questions? FBS Customer Support is ready to help! Contact us directly <a href=\"mailto:support@fbs.com\" target=\"_blank\">from within the letter</a> or forward an e-mail to <a href=\"mailto:support@fbs.com\" target=\"_blank\">support@fbs.com</a>."
-        },
-        {
-          "lang": "pt",
-          "site": "https://ptfbs.com",
-          "rtl": "",
-          "header": "Não perca a chance de ter um fim de semana incrível no Rio de Janeiro",
-          "preheader": "Leia o e-mail para saber os detalhes e participar de uma promoção especial da FBS",
-          "p0": "Olá, [[name]]!",
-          "p1": "A FBS lhe oferece a grande oportunidade de passar um fim de semana no Rio de Janeiro. Corra, a promoção está quase acabando. Você tem até o dia 31 de julho. Não perca a chance de passar dois dias agitados na Cidade do Paraíso.",
-          "p2": "Tire um descanso e esqueça os gráficos, colunas e transações por dois lindos dias. Só com uma mente limpa e um corpo bronzeado é que você poderá alcançar novos patamares no mercado Forex. Lembre-se de festejar muito quando trabalhar muito.",
-          "p3": "A FBS lhe dá a chance de ganhar uma viagem de luxo ao Rio para você e seu/sua acompanhante. Aproveite o sol, a praia e tudo mais que a cidade tem a oferecer.",
-          "p4": "Para participar da promoção, basta fazer o seguinte:",
-          "p5": "1. Deposite $500; <br> 2.  Negocie 5 lotes; <br> 3.  Envie um e-mail de confirmação para <a href=\"mailto:brasil@fbs.com\" class=\"link\" target=\"_blank\">brasil@fbs.com</a>.",
-          "p6": "E concorra a um fantástico fim de semana para duas pessoas no Rio de Janeiro.",
-          "p7": "No caso de você já depositou $ 500, mas ficou sem fundos antes de negociar 5 lotes, você sempre pode depositar o dinheiro adicional e negociar o número restante de lotes.",
-          "p8": "O ganhador será anunciado no dia 03/08/2016. Siga-nos no Facebook e acompanhe as notícias em <a href=\"https://ptfbs.com?utm_source=fbs-gr360&utm_medium=email&utm_content=newsletter_23072016_em232_body_text_index&utm_campaign=pt_rtrg\" class=\"link\" target=\"_blank\">ptfbs.com</a> para saber os resultados.",
-          "p9": "Boa sorte, <br> Equipe FBS",
-          "footerFirst": "FBS Inc company reminds you: trading on the binary options market is financially risk bearing. The present e-mail contains purely marketing-related information and is not a recommendation to execute any orders or invest funds. The decision to invest funds is made entirely by the client.",
-          "footerSecond": "You received this e-mail because you registered at <a href=\"https://fbs.com?utm_replace_index\" target=\"_blank\">fbs.com</a> (<a href=\"https://my.fbs.com/payments?utm_replace_payments\" target=\"_blank\">log into the Personal area</a>). Don’t miss a single important message – add our e-mails <a href=\"mailto:support@fbs.com\" target=\"_blank\">support@fbs.com</a> and <span style=\"color:inherit;\">info@email.fbs.com</span> to your address book and you will always receive the latest letters and find them in your Inbox. You may also <a href=\"[[remove]]\" target=\"_blank\"> unsubscribe from the newsletter</a>. Got questions? FBS Customer Support is ready to help! Contact us directly <a href=\"mailto:support@fbs.com\" target=\"_blank\">from within the letter</a> or forward an e-mail to <a href=\"mailto:support@fbs.com\" target=\"_blank\">support@fbs.com</a>."
-        }
-      ]
+	-
+		/**
+		 * @type {Array.<Object>} —
+		 * List of letter data
+		 */
+		var dataN =
+			[
+				{
+					"lang": "en",
+					"site": "https://fbs.com",
+					"rtl": "",
+					"header": "Don’t miss your chance to spend a fantastic weekend in Rio de Janeiro",
+					"preheader": "Read the e-mail to learn the details and participate in a special FBS promotion",
+					"p0": "Hello, [[name]]!",
+					"p1": "FBS gives you a remarkable opportunity to spend a weekend in Rio de Janeiro. Hurry up, the promotion is almost over, you only have time until the 31st of July. Don’t miss your chance to spend two crazy days in the Paradise City.",
+					"p2": "Give yourself some rest and forget about graphs, columns and trading for two beautiful days. Only with fresh mind and a tanned body you will be able to achieve new heights of Forex trading. Remember to party hard when you work hard.",
+					"p3": "FBS gives you a chance to win a luxury trip to Rio for you and your companion. Enjoy the sun, the beach and everything else the city has to offer.",
+					"p4": "To participate in the promotion just do the following:",
+					"p5": "1.				Deposit $500; <br>\n2.				Trade 5 lots; <br>\n3.				Send a confirmation e-mail to <a href=\"mailto:brasil@fbs.com\" class=\"link\" target=\"_blank\">brasil@fbs.com</a>.",
+					"p6": "And get a chance to win a fantastic weekend for two in Rio de Janeiro.",
+					"p7": "In case you deposited $500 but ran out of funds before trading 5 lots, you can always deposit additional money and trade the remaining number of lots.",
+					"p8": "The winner will be announced on 08.03.2016. Follow us on Facebook and keep up with the news on <a href=\"https://ptfbs.com?utm_source=fbs-gr360&utm_medium=email&utm_content=newsletter_23072016_em232_body_text_index&utm_campaign=en_rtrg\" class=\"link\" target=\"_blank\">ptfbs.com</a> to learn the results.",
+					"p9": "We wish you the best of luck, <br> FBS Team",
+					"footerFirst": "FBS Inc company reminds you: trading on the binary options market is financially risk bearing. The present e-mail contains purely marketing-related information and is not a recommendation to execute any orders or invest funds. The decision to invest funds is made entirely by the client.",
+					"footerSecond": "You received this e-mail because you registered at <a href=\"https://fbs.com?utm_replace_index\" target=\"_blank\">fbs.com</a> (<a href=\"https://my.fbs.com/payments?utm_replace_payments\" target=\"_blank\">log into the Personal area</a>). Don’t miss a single important message – add our e-mails <a href=\"mailto:support@fbs.com\" target=\"_blank\">support@fbs.com</a> and <span style=\"color:inherit;\">info@email.fbs.com</span> to your address book and you will always receive the latest letters and find them in your Inbox. You may also <a href=\"[[remove]]\" target=\"_blank\"> unsubscribe from the newsletter</a>. Got questions? FBS Customer Support is ready to help! Contact us directly <a href=\"mailto:support@fbs.com\" target=\"_blank\">from within the letter</a> or forward an e-mail to <a href=\"mailto:support@fbs.com\" target=\"_blank\">support@fbs.com</a>."
+				},
+				{
+					"lang": "pt",
+					"site": "https://ptfbs.com",
+					"rtl": "",
+					"header": "Não perca a chance de ter um fim de semana incrível no Rio de Janeiro",
+					"preheader": "Leia o e-mail para saber os detalhes e participar de uma promoção especial da FBS",
+					"p0": "Olá, [[name]]!",
+					"p1": "A FBS lhe oferece a grande oportunidade de passar um fim de semana no Rio de Janeiro. Corra, a promoção está quase acabando. Você tem até o dia 31 de julho. Não perca a chance de passar dois dias agitados na Cidade do Paraíso.",
+					"p2": "Tire um descanso e esqueça os gráficos, colunas e transações por dois lindos dias. Só com uma mente limpa e um corpo bronzeado é que você poderá alcançar novos patamares no mercado Forex. Lembre-se de festejar muito quando trabalhar muito.",
+					"p3": "A FBS lhe dá a chance de ganhar uma viagem de luxo ao Rio para você e seu/sua acompanhante. Aproveite o sol, a praia e tudo mais que a cidade tem a oferecer.",
+					"p4": "Para participar da promoção, basta fazer o seguinte:",
+					"p5": "1. Deposite $500; <br> 2.	Negocie 5 lotes; <br> 3.	Envie um e-mail de confirmação para <a href=\"mailto:brasil@fbs.com\" class=\"link\" target=\"_blank\">brasil@fbs.com</a>.",
+					"p6": "E concorra a um fantástico fim de semana para duas pessoas no Rio de Janeiro.",
+					"p7": "No caso de você já depositou $ 500, mas ficou sem fundos antes de negociar 5 lotes, você sempre pode depositar o dinheiro adicional e negociar o número restante de lotes.",
+					"p8": "O ganhador será anunciado no dia 03/08/2016. Siga-nos no Facebook e acompanhe as notícias em <a href=\"https://ptfbs.com?utm_source=fbs-gr360&utm_medium=email&utm_content=newsletter_23072016_em232_body_text_index&utm_campaign=pt_rtrg\" class=\"link\" target=\"_blank\">ptfbs.com</a> para saber os resultados.",
+					"p9": "Boa sorte, <br> Equipe FBS",
+					"footerFirst": "FBS Inc company reminds you: trading on the binary options market is financially risk bearing. The present e-mail contains purely marketing-related information and is not a recommendation to execute any orders or invest funds. The decision to invest funds is made entirely by the client.",
+					"footerSecond": "You received this e-mail because you registered at <a href=\"https://fbs.com?utm_replace_index\" target=\"_blank\">fbs.com</a> (<a href=\"https://my.fbs.com/payments?utm_replace_payments\" target=\"_blank\">log into the Personal area</a>). Don’t miss a single important message – add our e-mails <a href=\"mailto:support@fbs.com\" target=\"_blank\">support@fbs.com</a> and <span style=\"color:inherit;\">info@email.fbs.com</span> to your address book and you will always receive the latest letters and find them in your Inbox. You may also <a href=\"[[remove]]\" target=\"_blank\"> unsubscribe from the newsletter</a>. Got questions? FBS Customer Support is ready to help! Contact us directly <a href=\"mailto:support@fbs.com\" target=\"_blank\">from within the letter</a> or forward an e-mail to <a href=\"mailto:support@fbs.com\" target=\"_blank\">support@fbs.com</a>."
+				}
+			]
+		/**
+		 *	@constant
+		 *	@type {boolean} email client
+		 */
+		var GR = false;
+		var EMS = true;
 
-    /**
-     * @type {string} date
-     * — actual date
-     */
-    var date = '2307';
-    /**
-     * @type {string} task —
-     * task name
-     */
-    var task = 'em232';
+		/**
+		 * @type {string} date
+		 * — actual date
+		 */
+		var date = '2307';
 
-    /**
-     *
-     * @type {Object}
-     */
-     var topBanner =
-       {
-        "left": "http://multimedia.email.fbs.com/fbs/1/1/photos/3788.png",
-        "right": "http://multimedia.email.fbs.com/fbs/1/1/photos/3781.png",
-        "height": "257"
-       }
+		/**
+		 * @type {string} task —
+		 * task name
+		 */
+		var task = 'em232';
 
+		/**
+		 * @constant
+		 * @type {string} LETTERNAME —
+		 * title for ems
+		 * Leave empty if this === task
+		 */
+		var LETTERNAME = '';
 
-    // TODO
-    var LETTERNAME = ''
+		/**
+		 *
+		 * @type {Object}
+		 */
+		 var topBanner =
+			 {
+				"left": "http://multimedia.email.fbs.com/fbs/1/1/photos/3788.png",
+				"right": "http://multimedia.email.fbs.com/fbs/1/1/photos/3781.png",
+				"height": "257"
+			 }
 
 extends ../../framework/_layout
 
 //- CURRENT TEMPLATE
 mixin letter(prop)
-  each prop_item, index in prop
+	each prop_item, index in prop
+		if GR
+			+ifelse(prop_item, index, prop)
+		table(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
+			+preheader(prop_item)
+			//-
+				Border color map
+				"trans" (default),"trig", "promo", "news"
+			+startBanner (prop_item, topBanner)
 
-    +ifelse(prop_item, index, prop)
-    table(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
-      +preheader(prop_item)
-      //-
-        Border color map
-        "trans" (default),"trig", "promo", "news"
-      +startBanner (prop_item, topBanner)
+		+hr()
 
-    +hr()
+		table.contentTb(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
+			+h1(prop_item, 'left')
+				| !{prop_item.p0}
+			+text(prop_item)
+				| !{prop_item.p1}
+			+text(prop_item)
+				| !{prop_item.p2}
+			+text(prop_item)
+				| !{prop_item.p3}
+			+list(prop_item, prop_item.p4, prop_item.p5)
+			+text(prop_item)
+				| !{prop_item.p6}
+			+text(prop_item)
+				| !{prop_item.p7}
+			+text(prop_item)
+				| !{prop_item.p8}
+			+text(prop_item)
+				| !{prop_item.p9}
 
-    table.contentTb(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
-      +h1(prop_item, 'left')
-        | !{prop_item.p0}
-      +text(prop_item)
-        | !{prop_item.p1}
-      +text(prop_item)
-        | !{prop_item.p2}
-      +text(prop_item)
-        | !{prop_item.p3}
-      +list(prop_item, prop_item.p4, prop_item.p5)
-      +text(prop_item)
-        | !{prop_item.p6}
-      +text(prop_item)
-        | !{prop_item.p7}
-      +text(prop_item)
-        | !{prop_item.p8}
-      +text(prop_item)
-        | !{prop_item.p9}
+		+hr()
 
-    +hr()
-
-    +login(prop_item)
-    +footer(prop_item)
+		+login(prop_item)
+		+footer(prop_item)
 
 //- PRODUCTION
 block letter
-  +letter(pt_en)
+	+letter(pt_en)
 

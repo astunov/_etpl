@@ -49,14 +49,14 @@ block vars
 		 *	@constant
 		 *	@type {boolean} email client
 		 */
-		var GR = false;
-		var EMS = true;
+		var GR = true;
+		var EMS = false;
 
 		/**
 		 * @type {string} date
 		 * — actual date
 		 */
-		var date = '2307';
+		var date = '0808';
 
 		/**
 		 * @type {string} task —
@@ -99,8 +99,8 @@ mixin letter(prop)
 
 		+hr()
 
-		table.contentTb(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
-			+h1(prop_item, 'left')
+		+table({"class":"contentTb", "id": "wrapperTable", "dir": (prop_item.rtl) ? 'rtl' : 'ltr', "align":"center", "width": "600"})
+			+h1(prop_item)
 				| !{prop_item.p0}
 			+text(prop_item)
 				| !{prop_item.p1}
@@ -117,6 +117,10 @@ mixin letter(prop)
 				| !{prop_item.p8}
 			+text(prop_item)
 				| !{prop_item.p9}
+			+btn({
+				title: prop_item.p8,
+				link: prop_item.site + '/news/fbs-company-launches-instant-funds-withdrawal' + utm(date, task, 'body', 'button', 'news', prop_item.lang)
+			})
 
 		+hr()
 

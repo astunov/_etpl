@@ -88,8 +88,6 @@ extends ../../framework/_layout
 //- CURRENT TEMPLATE
 mixin letter(prop)
 	each prop_item, index in prop
-		if GR
-			+ifelse(prop_item, index, prop)
 		table(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
 			+preheader(prop_item)
 			//-
@@ -118,7 +116,7 @@ mixin letter(prop)
 			+text(prop_item)
 				| !{prop_item.p9}
 			+btn({
-				title: prop_item.p8,
+				title: "link",
 				link: prop_item.site + '/news/fbs-company-launches-instant-funds-withdrawal' + utm(date, task, 'body', 'button', 'news', prop_item.lang)
 			})
 

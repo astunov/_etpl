@@ -51,12 +51,13 @@ block vars
 		 */
 		var GR = true;
 		var EMS = false;
+		var IF = false;
 
 		/**
 		 * @type {string} date
 		 * — actual date
 		 */
-		var date = '0808';
+		var date = '0809';
 
 		/**
 		 * @type {string} task —
@@ -88,6 +89,8 @@ extends ../../framework/_layout
 //- CURRENT TEMPLATE
 mixin letter(prop)
 	each prop_item, index in prop
+		if GR && IF
+			+ifelse(prop_item, index, prop)
 		table(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
 			+preheader(prop_item)
 			//-
@@ -119,6 +122,22 @@ mixin letter(prop)
 				title: "link",
 				link: prop_item.site + '/news/fbs-company-launches-instant-funds-withdrawal' + utm(date, task, 'body', 'button', 'news', prop_item.lang)
 			})
+			tr
+				td.tb__wrapper
+					table.tb( width="100%" cellpadding="0" cellspacing="0" border="0" align="left")
+						tr
+							td: div !{prop_item.p16}
+							td: div !{prop_item.p17}
+							td: div !{prop_item.p18}
+						tr
+							td: div !{prop_item.p20}
+							td: div !{prop_item.p26}
+							td: div
+								+table
+									+btn({
+										 title: prop_item.p19,
+										 link: prop_item.site + '/seminar/seminar-hotel-grand-tjokro-jakarta-17-18-july-2016' + utm(date, task, 'body', 'button', 'seminar', prop_item.lang)
+									})
 
 		+hr()
 
@@ -128,4 +147,27 @@ mixin letter(prop)
 //- PRODUCTION
 block letter
 	+letter(pt_en)
+
+
+	//- +letter(en)
+	//- +letter(ar)
+	//- +letter(bn)
+	//- +letter(es)
+	//- +letter(cn)
+	//- +letter(id)
+	//- +letter(ja)
+	//- +letter(ko)
+	//- +letter(lo)
+	//- +letter(ms)
+	//- +letter(pt)
+	//- +letter(ru)
+	//- +letter(th)
+	//- +letter(ur)
+	//- +letter(vi)
+	//- +letter(ta)
+	//- +letter(my)
+
+	//- each item in dataN
+	//- 	| #{item.lang} <br>
+	//- 	| #{item.header} <br><br>
 

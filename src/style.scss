@@ -210,9 +210,11 @@ td div
     font-size: 11px;
 
     color: #4b4b4b;
+    @include fontFamily($baseFontFamily);
     a
     {
         text-decoration: none;
+        @include fontFamily($baseFontFamily);
 
         color: #85c0e1;
     }
@@ -365,10 +367,53 @@ $baseFontFamily: Arial, Helvetica, sans-serif;
 }
 
 
-// helpers
+// table
 
-.tb {
-    width: 100%;
-    border: 0;
-    border-collapse: collapse;
+.tb
+{
+    font-size: 12px;
+
+    color: #808080;
+}
+.tb > tr:first-child > td
+{
+    font-size: 12px;
+    font-weight: bold;
+
+    padding-bottom: 15px;
+}
+.tb div
+{
+    line-height: 15px;
+}
+.tb > tr > td
+{
+    font-size: 14px;
+
+    width: 33%;
+    padding-top: 17px;
+    padding-bottom: 13px;
+
+
+    text-align: left;
+    vertical-align: middle;
+
+    border-bottom: 1px solid #ebebeb;
+}
+.tb > tr > td:first-child {
+    padding-right: 5px;
+    padding-left:0;
+}
+.tb > tr > td:last-child {
+    padding-left: 5px;
+    padding-right:0;
+}
+.tb > tr > td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.tb__wrapper
+{
+    padding-top: 0;
+    padding-bottom: 25px;
 }

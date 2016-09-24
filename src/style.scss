@@ -43,6 +43,8 @@ img
 
     border: 0 none;
     outline: none;
+    font-size:16px;
+    white-space:pre;
 }
 
 a img
@@ -199,6 +201,10 @@ td div
     text-decoration: none;
 
     color: #4b9bce;
+}
+.link-alt {
+  text-decoration: none;
+  color: #808080;
 }
 
 /*********************************

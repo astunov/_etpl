@@ -1,79 +1,31 @@
-/*********************************
-** CORE
-*********************************/
+// BASE 2
 
-html,
 body
 {
-    margin: 0;
+    min-width: 100%;
     padding: 0;
 
-    border: 0;
-    outline: 0;
+    background-color: #f2f2f2;
+
+    Margin: 0;
 }
-/* Resets all body margins and padding to 0 for good measure */
-
-body
+table
 {
-    /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
-    -webkit-text-size-adjust: none;
-        -ms-text-size-adjust: none;
+    font-family: sans-serif;
 
-        background-color: #f2f2f2;
-}
-
-table td
-{
     border-spacing: 0;
-    border-collapse: collapse;
-
-
-
-    border: 0 none;
 }
-/*This resolves the Outlook 07, 10, and Gmail td padding issue. Heres more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
-
-img
-{
-    line-height: 100%;
-
-    height: auto;
-
-    text-decoration: none;
-
-    border: 0 none;
-    outline: none;
-    font-size:16px;
-    white-space:pre;
-}
-
-a img
-{
-    border: 0 none;
-}
-
-.img-block
-{
-    display: block;
-}
-.img-responsive img
-{
-    width: 100%;
-    height: auto;
-}
-
-table,
 td
 {
-    border-collapse: collapse;
-}
-
-#backgroundTable
-{
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0;
     padding: 0;
+}
+img
+{
+    border: 0;
+}
+.wrapper
+{
+    width: 100%;
 
     table-layout: fixed;
 
@@ -82,8 +34,11 @@ td
     -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
 }
-
-
+.webkit
+{
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 $baseFontFamily: Arial, Helvetica, sans-serif;
 
@@ -92,30 +47,18 @@ $baseFontFamily: Arial, Helvetica, sans-serif;
     font-family: $fontFamily;
 }
 
-
-td div
-{
-    line-height: 1.2;
-
-    @include fontFamily($baseFontFamily);
-}
-
-#wrapperTable
+.contentTb
 {
     background-color: #fff;
 }
 
 
-#wrapperTable > tr > td:not(.fluid)
+.contentTb > tr > td:not(.fluid)
 {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
-.wrapper {
-    width: 600px;
-    margin: 0 auto;
-}
 
 
 /*********************************

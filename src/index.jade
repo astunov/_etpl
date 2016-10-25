@@ -52,18 +52,19 @@ block vars
 		var GR = true;
 		var EMS = false;
 		var IF = false;
+		var MT = false;
 
 		/**
 		 * @type {string} date
 		 * — actual date
 		 */
-		var date = '0809';
+		var date = '2510';
 
 		/**
 		 * @type {string} task —
 		 * task name
 		 */
-		var task = 'em232';
+		var task = 'em400';
 
 		/**
 		 * @constant
@@ -80,8 +81,7 @@ block vars
 		 var topBanner =
 			 {
 				"left": "http://multimedia.email.fbs.com/fbs/1/1/photos/3788.png",
-				"right": "http://multimedia.email.fbs.com/fbs/1/1/photos/3781.png",
-				"height": "257"
+				"right": "http://multimedia.email.fbs.com/fbs/1/1/photos/3781.png"
 			 }
 
 extends ../../framework/_layout
@@ -89,10 +89,13 @@ extends ../../framework/_layout
 //- CURRENT TEMPLATE
 mixin letter(prop)
 	each prop_item, index in prop
+
 		if GR && IF
 			+ifelse(prop_item, index, prop)
-		table(width="600" cellpadding="0" cellspacing="0" border="0" align="center" id="wrapperTable" dir="#{(prop_item.rtl) ? 'rtl' : 'ltr'}")
+
+		+table({"dir": (prop_item.rtl) ? 'rtl' : 'ltr'})
 			+preheader(prop_item)
+		+table
 			//-
 				Border color map
 				"trans" (default),"trig", "promo", "news"
@@ -100,7 +103,7 @@ mixin letter(prop)
 
 		+hr()
 
-		+table({"class":"contentTb", "id": "wrapperTable", "dir": (prop_item.rtl) ? 'rtl' : 'ltr', "align":"center", "width": "600"})
+		+table({"class":"contentTb", "id": "wrapperTable", "dir": (prop_item.rtl) ? 'rtl' : 'ltr', "align":"center"})
 			+h1(prop_item)
 				| !{prop_item.p0}
 			+text(prop_item)
@@ -109,7 +112,10 @@ mixin letter(prop)
 				| !{prop_item.p2}
 			+text(prop_item)
 				| !{prop_item.p3}
-			+list(prop_item, prop_item.p4, prop_item.p5)
+			+text(prop_item)
+				| !{prop_item.p4}
+			+text(prop_item)
+				| !{prop_item.p5}
 			+text(prop_item)
 				| !{prop_item.p6}
 			+text(prop_item)
@@ -122,6 +128,7 @@ mixin letter(prop)
 				title: "link",
 				link: prop_item.site + '/news/fbs-company-launches-instant-funds-withdrawal' + utm(date, task, 'body', 'button', 'news', prop_item.lang)
 			})
+			+list(prop_item, prop_item.p4, prop_item.p5)
 			tr
 				td.tb__wrapper
 					table.tb( width="100%" cellpadding="0" cellspacing="0" border="0" align="left")

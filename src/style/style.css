@@ -1,71 +1,36 @@
-/*********************************
-** CORE
-*********************************/
-html,
 body {
-  margin: 0;
+  min-width: 100%;
   padding: 0;
-  border: 0;
-  outline: 0; }
+  background-color: #f2f2f2;
+  Margin: 0; }
 
-/* Resets all body margins and padding to 0 for good measure */
-body {
-  /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  background-color: #f2f2f2; }
+table {
+  font-family: sans-serif;
+  border-spacing: 0; }
 
-table td {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border: 0 none; }
-
-/*This resolves the Outlook 07, 10, and Gmail td padding issue. Heres more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
-img {
-  line-height: 100%;
-  height: auto;
-  text-decoration: none;
-  border: 0 none;
-  outline: none; }
-
-a img {
-  border: 0 none; }
-
-.img-block {
-  display: block; }
-
-.img-responsive img {
-  width: 100%;
-  height: auto; }
-
-table,
 td {
-  border-collapse: collapse; }
+  padding: 0; }
 
-#backgroundTable {
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0;
-  padding: 0;
+img {
+  border: 0; }
+
+.wrapper {
+  width: 100%;
   table-layout: fixed;
   background-color: #f2f2f2;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-td div {
-  line-height: 1.2;
-  font-family: Arial, Helvetica, sans-serif; }
+.webkit {
+  max-width: 600px;
+  margin: 0 auto; }
 
-#wrapperTable {
+.contentTb {
   background-color: #fff; }
 
-#wrapperTable > tr > td:not(.fluid) {
-  padding-right: 60px;
-  padding-left: 60px; }
-
-.wrapper {
-  width: 600px;
-  margin: 0 auto; }
+.contentTb > tr > td:not(.fluid) {
+  padding-right: 10%;
+  padding-left: 10%; }
 
 /*********************************
 ** ELEMENTS
@@ -115,14 +80,20 @@ td div {
   text-decoration: none;
   color: #4b9bce; }
 
+.link-alt {
+  text-decoration: none;
+  color: #808080; }
+
 /*********************************
 ** FOOTER
 *********************************/
 #footerTable {
   font-size: 11px;
-  color: #4b4b4b; }
+  color: #4b4b4b;
+  font-family: Arial, Helvetica, sans-serif; }
   #footerTable a {
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     color: #85c0e1; }
 
 .banner img {
@@ -218,6 +189,38 @@ td div {
   padding-bottom: 35px; }
 
 .tb {
-  width: 100%;
-  border: 0;
-  border-collapse: collapse; }
+  font-size: 12px;
+  color: #808080; }
+
+.tb > tr:first-child > td {
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 15px; }
+
+.tb div {
+  line-height: 15px; }
+
+.tb > tr > td {
+  font-size: 14px;
+  width: 33%;
+  padding-top: 17px;
+  padding-bottom: 13px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #ebebeb; }
+
+.tb > tr > td:first-child {
+  padding-right: 5px;
+  padding-left: 0; }
+
+.tb > tr > td:last-child {
+  padding-left: 5px;
+  padding-right: 0; }
+
+.tb > tr > td {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.tb__wrapper {
+  padding-top: 0;
+  padding-bottom: 25px; }

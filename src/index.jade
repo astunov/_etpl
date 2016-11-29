@@ -50,8 +50,8 @@ block vars
 		 *	@constant
 		 *	@type {boolean} email client
 		 */
-		var GR = true;
-		var EMS = false;
+		var GR = false;
+		var EMS = true;
 		var IF = false;
 		var MT = false;
 
@@ -59,13 +59,13 @@ block vars
 		 * @type {string} date
 		 * — actual date
 		 */
-		var date = '2510';
+		var date = '3011';
 
 		/**
 		 * @type {string} task —
 		 * task name
 		 */
-		var task = 'em400';
+		var task = 'em430';
 
 		/**
 		 * @constant
@@ -75,21 +75,31 @@ block vars
 		 */
 		var LETTERNAME = '';
 
-		/**
-		 *
-		 * @type {Object}
-		 */
-		 var topBanner =
-			 {
-				"left": "http://multimedia.email.fbs.com/fbs/1/1/photos/3788.png",
-				"right": "http://multimedia.email.fbs.com/fbs/1/1/photos/3781.png"
-			 }
+		let prodSrc;
+		const SRC = prodSrc || `http://newem.ru/t/${task}/i/`;
+
 
 extends ../../framework/_layout
 
 //- CURRENT TEMPLATE
 mixin letter(prop)
 	each prop_item, index in prop
+
+		-
+			/**
+			 *
+			 * @type {Object}
+			 * @property {string} top — banner top fragment
+			 * @property {string} let — banner left fragment
+			 * @property {string} right — banner right fragment
+			 */
+			 var topBanner =
+				 {
+				 	top: `${SRC}1_01.jpg`,
+				 	left: `${SRC}1_02.jpg`,
+				 	right: `${SRC}1_03.jpg`,
+				 	topLink: `${prop_item.site}/promo/getbmw${utm(date, task, 'body', 'banner', 'getbmw', prop_item.lang)}`
+				 }
 
 		if GR && IF
 			+ifelse(prop_item, index, prop)
@@ -156,26 +166,33 @@ mixin letter(prop)
 block letter
 	+letter(pt_en)
 
-
 	//- +letter(en)
 	//- +letter(ar)
 	//- +letter(bn)
-	//- +letter(es)
 	//- +letter(cn)
 	//- +letter(id)
-	//- +letter(ja)
+	//- +letter(jp)
 	//- +letter(ko)
-	//- +letter(lo)
 	//- +letter(ms)
 	//- +letter(pt)
 	//- +letter(ru)
-	//- +letter(th)
-	//- +letter(ur)
 	//- +letter(vi)
-	//- +letter(ta)
+	//- +letter(ur)
+
+	//- Need text fixes
+	//- +letter(lo)
+	//- +letter(th)
 	//- +letter(my)
+
+	//- NO
+	//- +letter(ta)
+	//- +letter(es)
+
 
 	//- each item in dataN
 	//- 	| #{item.lang} <br>
 	//- 	| #{item.header} <br><br>
-
+	//- 	if item.header2
+	//- 		| #{item.header2} <br><br>
+	//- 	if item.header3
+	//- 		| #{item.header3} <br><br>
